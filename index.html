@@ -25,15 +25,17 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Telma Fonseca</h1>
-								<p>Este é o meu site pessoal. <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+								<p>Este é o meu site pessoal.</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
 								<li><a href="#contact">Contact</a></li>
+								<li><a href="#acknol">Support</a></li>
+								<li><a href="#mcmeg">MCMEG</a></li>
+								
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -59,9 +61,9 @@
 							<article id="work">
 								<h2 class="major">Work</h2>
 								<span class="image main"><img src="images/isssd.jpg" alt="" /></span>
-								<h2>Event:</h2>
+							<!--	<h2>" "</h2>-->
 					
-							<section id="#">
+							<section id="event">
   								<h2>XXV International Symposium on Solid State Dosimetry</h2>
 								<p><strong>Date:</strong> September 22–26, 2025 | 08:00 AM – 18:00 PM (GMT-3)</p>
 								<p><strong>Location:</strong> Centro de Desenvolvimento da Tecnologia Nuclear (CDTN/CNEN) - Belo Horizonte, MG, Brazil</p>
@@ -96,17 +98,18 @@
 								<li><a href="https://www.amazon.com/dp/B0C957856R?ref_=cm_sw_r_cp_ud_dp_Z5QV29VG5H5CGQ5C3CS6" target="_blank">Computational Experiments of Radiation Physics (eBook)</a></li>
 								<li><a href="https://researchportal.sckcen.be/en/persons/telma-fonseca" target="_blank">PhD Thesis and Data</a></li>
 								<li><a href="https://inis.iaea.org/records/njz63-f5w38" target="_blank">Master Dissertation</a></li>
-								<li><a href="link-to-nna-mcnp.pdf" target="_blank">Neutron Activation Analysis Project (MCNP, SCK-CEN, 2008)</a></li>
+								<li><a href="assets/docs/Shel-shielding MCNP_final.pdf" target="_blank">Neutron Activation Analysis Project (MCNP, SCK-CEN, 2008)</a></li>
 								
 							</ul>
 							</section>
 							</article>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
+						<!-- Support -->
+							<article id="acknol">
+								<h2 class="major">Support</h2>
 								<span class="image main"><img src="images/sponsors.jpg" alt="sponsor" class="img-custom" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<p>We would like to express our sincere appreciation to all collaborating institutions and funding agencies whose support has been instrumental in enabling our scientific and academic endeavors.</p> 								<p> Their contributions have played a vital role in fostering research, promoting innovation, and supporting the development of advanced studies in the fields of radiation science, dosimetry, and computational modeling. We are also grateful for the access to infrastructure and computing resources that have significantly enhanced the quality and impact of our work.</p>
+								<p>This continued support is essential for the advancement of knowledge and the training of future generations of researchers.</p>
 							
 							<!-- Agradecimentos e apoio -->
 							<section id="support">
@@ -115,20 +118,23 @@
 							<ul>
 								<li>FAPEMIG (Projects: APQ-00083-18, APQ-01388-21, BPD-00963-22)</li>
 								<li>CNPq (Processes: 424734/2018-4, 302990/2021-6, 2070.01.0005404/2021-81)</li>
+								
 							</ul>
 							<p>Computational resources were kindly provided by:</p>
 							<ul>
 								<li>LCR/UERJ</li>
 								<li>LN – Instituto de Radioproteção e Dosimetria (IRD/CNEN-RJ)</li>
+								<li><a href="https://sdumont.lncc.br/projects_view.php?pg=projects&status=ongoing" target="_blank">
+									MCMEG project on SDumont – Search "MCMEG" on the page </a></li>
 							</ul>
 							</section>
-
 							</article>
 
+							 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<!-- <form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -147,7 +153,28 @@
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+								</form>-->
+								<form method="POST" action="https://formspree.io/f/xrbkwoly">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required />
+									</div>
+										<div class="field half">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4" required></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
 								</form>
+
 								<ul class="icons">
 									<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
 									<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
@@ -156,9 +183,7 @@
 									<li><a href="https://www.instagram.com/fonsecat15/" class="icon brands fa-instagram" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a>
 									<li><a href="https://github.com/mcmegUFMG" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span>
 									<li><a href="https://github.com/TCFF01" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.youtube.com/@mcmegufmg" class="icon brands fa-youtube" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
-									<li><a href="https://groups.google.com/g/MCMEG?pli=1" class="icon brands fa-google" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
-								
+	
 								</ul>
 								<!-- Contato -->
 								<section id="contact">
@@ -170,6 +195,24 @@
 									<li>Email 4: <a href="mailto:tcff01@gmail.com">tcff01@gmail.com</a></li>
 								</ul>
 								</section>
+							</article>
+						<!--MCMEG -->
+							<article id="mcmeg">
+								<h2 class="major">MCMEG</h2>
+								<span class="image main"><img src="images/mcmeg.jpg" alt="MCMEG banner" /></span>
+								<p>The Monte Carlo Modelling Expert Group (MCMEG) is a collaborative research initiative focused on the application of Monte Carlo methods in radiation protection, radiobiology, and dosimetry.</p>
+								<p>Through computational modeling and advanced simulation techniques, the group contributes to the development of new methodologies and tools for internal dosimetry, radiotherapy, and nanodosimetry.</p>
+								<p>Learn more at the <a href="https://sites.google.com/view/mcmeg-ufmg/in%C3%ADcio?authuser=0" target="_blank">MCMEG website</a>.</p>
+							<ul class="icons">
+									<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
+									<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
+
+									<li><a href="https://www.instagram.com/mcmeg_radiation/" class="icon brands fa-instagram" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a>
+							    	<li><a href="https://github.com/mcmegUFMG" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span>
+									<li><a href="https://www.youtube.com/@mcmegufmg" class="icon brands fa-youtube" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+									<li><a href="https://groups.google.com/g/MCMEG?pli=1" class="icon brands fa-google" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+								
+								</ul>
 							</article>
 
 						<!-- Elements -->
