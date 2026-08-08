@@ -295,7 +295,12 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+							var closeHref = $this.attr('data-close');
+
+							if (closeHref)
+								window.location.href = closeHref;
+							else
+								location.hash = '';
 						});
 
 				// Prevent clicks from inside article from bubbling.
