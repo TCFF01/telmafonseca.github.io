@@ -407,7 +407,7 @@
 	$window.on('load', function() {
 		var $badge = $('#visitor-counter-badge');
 		if ($badge.length) {
-			$badge.attr('src', 'https://hits.dwyl.com/TCFF01/telmafonseca.github.io.svg?t=' + new Date().getTime());
+			$badge.attr('src', 'https://komarev.com/ghpvc/?username=telmafonseca-website&label=VISITORS&color=34393d&t=' + new Date().getTime());
 		}
 	});
 
