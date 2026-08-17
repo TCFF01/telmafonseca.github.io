@@ -403,4 +403,12 @@
 						$main._show(location.hash.substr(1), true);
 					});
 
+	// Visitor counter badge loader with cache-busting timestamp
+	$window.on('load', function() {
+		var $badge = $('#visitor-counter-badge');
+		if ($badge.length) {
+			$badge.attr('src', 'https://hits.dwyl.com/TCFF01/telmafonseca.github.io.svg?t=' + new Date().getTime());
+		}
+	});
+
 })(jQuery);
