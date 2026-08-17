@@ -1665,3 +1665,8 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+.visitor-counter img, #visitor-counter-badge {
+	filter: grayscale(100%) opacity(0.85);
+	-webkit-filter: grayscale(100%) opacity(0.85);
+}
