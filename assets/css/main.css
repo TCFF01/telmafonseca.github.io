@@ -559,27 +559,27 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(100, 116, 139, 0.7) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(100, 116, 139, 0.7) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(100, 116, 139, 0.7) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(100, 116, 139, 0.7) !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(100, 116, 139, 0.7) !important;
 		opacity: 1.0;
 	}
 
@@ -653,13 +653,13 @@ input, select, textarea {
 		.image:before {
 			pointer-events: none;
 			background-image: url("../../images/overlay.png");
-			background-color: rgba(19, 21, 25, 0.5);
+			background-color: transparent;
 			border-radius: 4px;
 			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.5;
+			opacity: 0.1;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -1669,4 +1669,283 @@ input, select, textarea {
 .visitor-counter img, #visitor-counter-badge {
 	filter: grayscale(100%) opacity(0.85);
 	-webkit-filter: grayscale(100%) opacity(0.85);
+}
+
+/* Theme Toggle Floating Button */
+
+.theme-toggle-btn {
+	position: fixed;
+	top: 1.25rem;
+	right: 1.25rem;
+	z-index: 10000;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background: rgba(27, 31, 34, 0.85);
+	color: #ffffff;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1rem;
+	transition: all 0.25s ease-in-out;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+	outline: none;
+	padding: 0;
+}
+
+.theme-toggle-btn:hover {
+	transform: scale(1.1);
+	background: #ffffff;
+	color: #1b1f22;
+	border-color: #ffffff;
+}
+
+/* Light Mode Theme Overrides */
+
+body.light-mode {
+	background: #ffffff;
+	color: #111111;
+}
+
+body.light-mode,
+body.light-mode input,
+body.light-mode select,
+body.light-mode textarea {
+	color: #111111;
+}
+
+body.light-mode #bg:before {
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url("../../images/overlay.png");
+}
+
+body.light-mode.is-preload #bg:before {
+	background-color: #ffffff;
+}
+
+body.light-mode #header .logo {
+	border: solid 2px #000000;
+	color: #000000;
+}
+
+body.light-mode #header .content {
+	border-color: #000000;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+}
+
+body.light-mode #header .content p {
+	color: #111111;
+	font-weight: 600;
+}
+
+body.light-mode #header nav ul {
+	border: solid 2px #000000;
+}
+
+body.light-mode #header nav ul li {
+	border-left: solid 1px #000000;
+}
+
+body.light-mode #header nav ul li a {
+	color: #000000;
+	font-weight: 600;
+}
+
+body.light-mode #header nav ul li a:hover {
+	background-color: #000000;
+	color: #ffffff !important;
+}
+
+body.light-mode #header nav ul li a:active {
+	background-color: #333333;
+	color: #ffffff !important;
+}
+
+body.light-mode #header nav.use-middle:after {
+	background: #000000;
+}
+
+body.light-mode #main article {
+	background-color: #ffffff;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+	border: 2px solid #000000;
+	border-radius: 4px;
+	color: #111111;
+}
+
+body.light-mode #main article .close:before {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23000000%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+}
+
+body.light-mode #main article .close:hover:before {
+	background-color: #000000;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+}
+
+body.light-mode #main article .close:active:before {
+	background-color: #333333;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+	color: #000000;
+	font-weight: 700;
+}
+
+body.light-mode h1.major,
+body.light-mode h2.major,
+body.light-mode h3.major,
+body.light-mode h4.major,
+body.light-mode h5.major,
+body.light-mode h6.major {
+	border-bottom: solid 2px #000000;
+}
+
+body.light-mode strong,
+body.light-mode b {
+	color: #000000;
+	font-weight: 700;
+}
+
+body.light-mode a {
+	border-bottom: solid 1px #000000;
+	color: #000000;
+	font-weight: 400;
+}
+
+body.light-mode a:hover {
+	border-bottom-color: transparent;
+	background-color: #000000;
+	color: #ffffff !important;
+}
+
+body.light-mode blockquote {
+	border-left: solid 4px #000000;
+}
+
+body.light-mode code {
+	background: #f1f1f1;
+	color: #000000;
+	border: 1px solid #d1d1d1;
+}
+
+body.light-mode hr {
+	border-bottom: solid 2px #000000;
+}
+
+body.light-mode input[type="text"],
+body.light-mode input[type="password"],
+body.light-mode input[type="email"],
+body.light-mode input[type="tel"],
+body.light-mode select,
+body.light-mode textarea {
+	background-color: #ffffff;
+	border: solid 1px #000000;
+	color: #000000;
+}
+
+body.light-mode input[type="text"]:focus,
+body.light-mode input[type="password"]:focus,
+body.light-mode input[type="email"]:focus,
+body.light-mode input[type="tel"]:focus,
+body.light-mode select:focus,
+body.light-mode textarea:focus {
+	background: #ffffff;
+	border-color: #000000;
+	box-shadow: 0 0 0 2px #000000;
+}
+
+body.light-mode select {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23000000' /%3E%3C/svg%3E");
+}
+
+body.light-mode select option {
+	color: #000000;
+	background: #ffffff;
+}
+
+body.light-mode input[type="checkbox"] + label:before,
+body.light-mode input[type="radio"] + label:before {
+	border: solid 1px #000000;
+}
+
+body.light-mode input[type="checkbox"]:checked + label:before,
+body.light-mode input[type="radio"]:checked + label:before {
+	background: #000000 !important;
+	border-color: #000000 !important;
+	color: #ffffff;
+}
+
+body.light-mode table tbody tr {
+	border: solid 1px #000000;
+}
+
+body.light-mode table tbody tr:nth-child(2n + 1) {
+	background-color: #f8f9fa;
+}
+
+body.light-mode table th {
+	color: #000000;
+	font-weight: 700;
+}
+
+body.light-mode table thead {
+	border-bottom: solid 2px #000000;
+}
+
+body.light-mode table tfoot {
+	border-top: solid 2px #000000;
+}
+
+body.light-mode input[type="submit"],
+body.light-mode input[type="reset"],
+body.light-mode input[type="button"],
+body.light-mode button,
+body.light-mode .button {
+	box-shadow: inset 0 0 0 1px #000000;
+	color: #000000 !important;
+	font-weight: 600;
+}
+
+body.light-mode input[type="submit"]:hover,
+body.light-mode input[type="reset"]:hover,
+body.light-mode input[type="button"]:hover,
+body.light-mode button:hover,
+body.light-mode .button:hover {
+	background-color: #000000;
+	color: #ffffff !important;
+}
+
+body.light-mode input[type="submit"].primary,
+body.light-mode input[type="reset"].primary,
+body.light-mode input[type="button"].primary,
+body.light-mode button.primary,
+body.light-mode .button.primary {
+	background-color: #000000;
+	box-shadow: none;
+	color: #ffffff !important;
+}
+
+body.light-mode #footer .copyright {
+	color: #111111;
+	font-weight: 600;
+}
+
+body.light-mode .theme-toggle-btn {
+	border: 1px solid #000000;
+	background: #ffffff;
+	color: #000000;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .theme-toggle-btn:hover {
+	background: #000000;
+	color: #ffffff;
+	border-color: #000000;
 }

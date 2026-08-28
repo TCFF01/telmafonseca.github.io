@@ -14,6 +14,11 @@
 		$main = $('#main'),
 		$main_articles = $main.children('article');
 
+	// Restore saved theme immediately to prevent flashing
+	if (localStorage.getItem('site-theme') === 'light') {
+		$body.addClass('light-mode');
+	}
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -403,11 +408,43 @@
 						$main._show(location.hash.substr(1), true);
 					});
 
-	// Visitor counter badge loader with cache-busting timestamp
+	// Theme toggle functionality (Light / Dark Mode switch)
+	function initThemeToggle() {
+		var isLight = $body.hasClass('light-mode');
+		var iconClass = isLight ? 'fa-moon' : 'fa-sun';
+		var btnTitle = isLight ? 'Alternar para Modo Escuro' : 'Alternar para Modo Claro';
+
+		if ($('#theme-toggle').length === 0) {
+			var $btn = $('<button id="theme-toggle" class="theme-toggle-btn" title="' + btnTitle + '" aria-label="' + btnTitle + '"><i class="fas ' + iconClass + '"></i></button>');
+			$body.append($btn);
+		}
+
+		$(document).on('click', '#theme-toggle', function() {
+			$body.toggleClass('light-mode');
+			var currentlyLight = $body.hasClass('light-mode');
+			var $icon = $(this).find('i');
+
+			if (currentlyLight) {
+				localStorage.setItem('site-theme', 'light');
+				$icon.removeClass('fa-sun').addClass('fa-moon');
+				$(this).attr('title', 'Alternar para Modo Escuro').attr('aria-label', 'Alternar para Modo Escuro');
+			} else {
+				localStorage.setItem('site-theme', 'dark');
+				$icon.removeClass('fa-moon').addClass('fa-sun');
+				$(this).attr('title', 'Alternar para Modo Claro').attr('aria-label', 'Alternar para Modo Claro');
+			}
+		});
+	}
+
+	$window.on('load', function() {
+		initThemeToggle();
+	});
+
+	// Visitor counter badge loader
 	$window.on('load', function() {
 		var $badge = $('#visitor-counter-badge');
 		if ($badge.length) {
-			$badge.attr('src', 'https://komarev.com/ghpvc/?username=telmafonseca-website&label=VISITORS&color=34393d&t=' + new Date().getTime());
+			$badge.attr('src', 'https://hits.sh/tcff01.github.io/telmafonseca.github.io.svg?color=34393d&label=VISITORS&labelColor=555555');
 		}
 	});
 
